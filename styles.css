@@ -1,0 +1,200 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and container */
+body {
+    font-family: 'Arial', sans-serif;
+    /* Blue Gradient background */
+    background: linear-gradient(135deg, #2193b0, #6dd5ed);  
+    /* Alternatively, use Purple Gradient if preferred: 
+    background: linear-gradient(135deg, #7b4397, #dc2430); */
+    color: #333;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Navigation */
+header {
+    background-color: #1c3b6b;
+    color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav h1 {
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #4e73df;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+header nav ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Profile Section */
+#profile {
+    margin-bottom: 40px;
+    padding: 40px 0;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#profile h2 {
+    font-size: 30px;
+    text-align: center;
+    color: #333;
+}
+
+.profile-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #4e73df;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
+}
+
+.profile-text {
+    max-width: 600px;
+}
+
+.profile-text ul {
+    list-style: disc;
+    padding-left: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+.profile-text ul li {
+    margin: 10px 0;
+}
+
+/* Project Styles */
+.project {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #1c3b6b;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    background-color: #4e73df;
+}
+
+.project h3 {
+    color: #fff;
+}
+
+.project p {
+    color: #e0e0e0;
+}
+
+.project a {
+    color: #ffdd57;
+}
+
+.project a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #1c3b6b;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    header nav .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        margin-top: 10px;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .profile-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+}
